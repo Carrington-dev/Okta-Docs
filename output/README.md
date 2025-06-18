@@ -120,6 +120,11 @@ If Okta is down and `requests.get()` fails, every request breaks.
 
 ---
 
+### **Class Based Implemetation But Not Object Oriented Implementaion**
+This middle uses a class defination and even inherits a Mixin but it does not follow an OOPs standard, It's hard for a new person in the team to understand or enhance it because it's monolitic.
+
+---
+
 ## ✅ Suggested Improvements
 
 | Area               | Suggested Action                                                        |
