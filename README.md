@@ -23,3 +23,8 @@ Building and testing nextjs systems
 6.  Potential for split(" ", 1) to throw error
 7.  No fallback if JWKS fails
 8.  __No documentation__
+
+### Optional Enhancements
+1. Add Django settings for toggling the middleware on/off in dev.
+2. Track how many times JWKS fails or add Sentry monitoring.
+3. Rotate RSA keys with caching refresh (in case Okta rotates).
