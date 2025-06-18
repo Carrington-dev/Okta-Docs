@@ -17,4 +17,9 @@ Building and testing nextjs systems
    ```bash
    You're decoding the token without verifying signature, then trusting the aud claim for the actual decode.
    ```
-4. 
+3.  No check on token azp, scp, or email claims
+4.  Missing logging on critical auth outcomes
+5.  Unsafe header reliance
+6.  Potential for split(" ", 1) to throw error
+7.  No fallback if JWKS fails
+8.  __No documentation__
