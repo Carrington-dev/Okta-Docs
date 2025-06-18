@@ -109,21 +109,10 @@ The middleware **trusts frontend-provided `BRIEF-AI-EMAIL` and `BRIEF-AI-USERNAM
 
 ---
 
-### 6. **Potential for `split(" ", 1)` to throw**
-
-If `username` only has one word, `split(" ", 1)` might result in unpacking error.
-
-**Fix**: Safer default unpacking:
-
-```python
-parts = username.strip().split(" ", 1)
-first_name = parts[0]
-last_name = parts[1] if len(parts) > 1 else ""
-```
 
 ---
 
-### 7. **No fallback if JWKS fails**
+### 6. **No fallback if JWKS fails**
 
 If Okta is down and `requests.get()` fails, every request breaks.
 
