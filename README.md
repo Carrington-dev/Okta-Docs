@@ -10,3 +10,11 @@ Building and testing nextjs systems
 4. Logs detailed events for debugging.
 5. Automatically creates users if they don’t exist.
 6. Elevates admin users based on an allowlist.
+
+### ⚠️ Issues & Weaknesses
+1. Performance: JWKS is fetched on every request
+2. Insecure JWT audience handling
+   ```bash
+   You're decoding the token without verifying signature, then trusting the aud claim for the actual decode.
+   ```
+4. 
